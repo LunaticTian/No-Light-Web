@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kre</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <link rel="stylesheet" href={{ url_for('static',filename='css/normalize.css') }}>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href={{ url_for('static',filename='css/cayman.css') }}>
+
+{#    <p class="text1" style="position: fixed;top: 0;text-align: center;width: 100%;color: #158b66">#}
+{#      <span class="placeholder "><span class="iconfont icon-sousuo"></span><span class="text"><a href={{ urlwz }}>{{ ml +"——"+ wz }}</a></span></span>#}
+{#    </p>#}
+
+</head>
+
+ <section class="page-header">
+<h1 class="project-name">{{ titile }}</h1>
+   </section>
+<form action="/search" method="post" target="_blank">
+    <input type="text" name="keyword" value="">
+    <input type="submit" value = "搜索" >
+</form>
+<body>
+    <div style="text-align:center">
+        <br/>
+        <br/><br/>
+            {% for num in nums %}
+                <tr>
+                <td><h3><a href="{{ "list/"+num }}">{{ num }}</a></h3></td>
+                </tr>
+            {% endfor %}
+            <h3>{{ tips }}</h3>
+    </div>
+</body>
+</html>
