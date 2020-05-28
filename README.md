@@ -23,7 +23,10 @@ Python3 以上
 # 使用说明
 
 *  收集下载的图集或者漫画等
-* 放置于 [\static\HM01\shengguang](\static\HM01\shengguang) 内
+* 放置于 [\static\HM01\shengguang](\static\HM01\shengguang) 内 图示：
+
+![](https://s1.ax1x.com/2020/05/29/tmn5UP.png)
+
 * 修改 [app.py](app.py)账号密码——也可不修改  PS:仅限于 **Account** 版
 >  #账号密码验证<br>
 >  if username == 'test' and password == 'test':
@@ -35,7 +38,7 @@ Python3 以上
 
 ### Account
 
-* 带有账户及权限验证，适用于**[信任级别]**的公开分享。
+* 带有账户及权限验证，适用于 **[信任级别]** 的公开分享。
 
 * 适用场景包含VPS的公共分享或局域网分享。
 
