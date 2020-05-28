@@ -24,7 +24,7 @@ Python3 以上
 
 *  收集下载的图集或者漫画等
 * 放置于 [\static\HM01\shengguang](\static\HM01\shengguang) 内
-* 修改 [app.py](app.py) PS:仅限于 **Account** 版
+* 修改 [app.py](app.py)账号密码——也可不修改  PS:仅限于 **Account** 版
 >  #账号密码验证<br>
 >  if username == 'test' and password == 'test':
  
