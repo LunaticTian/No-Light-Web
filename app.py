@@ -15,7 +15,7 @@ sum = 0
 
 @app.route('/')
 def index_login():
-    return render_template("login.html")
+    return redirect(url_for('index'))
 
 
 def getMl(username, urlwz=None):
@@ -83,22 +83,6 @@ def delete(name):
     return redirect(url_for('one', name=random.choice(nums)))
 
 
-
-# 验证是否登录
-@app.before_request
-def before_user():
-    if request.path == "/login" or request.path == "/":
-        if 'username' in session :
-            return redirect(url_for('index'))
-        return
-    if 'username' not in session and  '/static/' not in request.path:
-        return render_template("login.html")
-    # 加入阅读位置提醒
-    if 'pdf' in request.path:
-        userEndRead[session['username']]={'ml':request.path.split('/')[3],'wz':request.path.split('/')[4]}
-    return
-
-
 @app.errorhandler(404)  # 使用app.errorhandler装饰器，传入错误码404
 def page_not_found(e):
     return render_template("index.html")  # 返回响应文档404.html，状态码404.(下同）
@@ -108,21 +92,6 @@ def page_not_found(e):
 def internal_server_error(e):
     # return render_template('500.html'), 500
     return render_template("index.html")
-
-
-# 增加登录用户的session
-@app.route('/login',methods=['POST'])
-def login():
-    if request.method == 'POST':
-        username = request.values.get('username');
-        password = request.values.get('password');
-        if username == 'lunatic' and password == '494296145':
-            session['username'] = username
-            print("ok")
-            return 'index.html'
-        else:
-            print("no")
-            return "error"
 
 
 
