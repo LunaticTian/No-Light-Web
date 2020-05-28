@@ -51,7 +51,7 @@ Python3 以上
 	<h2 id = 'dibu'><a href={{ "/list/"+titile+"/delete" }}  >删除</a></h2>
 
 
-#### Free
+### Free
 
 * 不带有任何权限认证，适用于个人PC，局域网分享。
 * 适用场景包含个人PC搭建或局域网分享。
