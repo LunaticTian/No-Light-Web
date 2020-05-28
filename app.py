@@ -116,12 +116,11 @@ def login():
     if request.method == 'POST':
         username = request.values.get('username');
         password = request.values.get('password');
-        if username == 'lunatic' and password == '494296145':
+        # 账号密码验证
+        if username == 'test' and password == 'test':
             session['username'] = username
-            print("ok")
             return 'index.html'
         else:
-            print("no")
             return "error"
 
 
