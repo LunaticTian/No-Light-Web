@@ -68,6 +68,4 @@ Python3 以上
 ## 搜索
 ![](https://s1.ax1x.com/2020/05/29/tmnmcQ.png)
 
-## 浏览
 
-![](https://s1.ax1x.com/2020/05/29/tmnDN6.png)
